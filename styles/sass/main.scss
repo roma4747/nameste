@@ -1,0 +1,12 @@
+@import "./base/normalize";
+@import "./base/variables";
+@import "./layout/header";
+@import "./components/logo";
+@import "./components/mob-menu";
+@import "./components/navigation";
+@import "./components/contacts";
+
+.notebook {
+  margin: 0 auto;
+  width: 100%;
+}

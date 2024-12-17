@@ -1,0 +1,147 @@
+.mob-hamburger {
+  position: fixed;
+  right: 16px;
+  z-index: 1000;
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
+
+  @media (min-width: 1295px) {
+    & {
+      display: none;
+    }
+  }
+  @media (min-width: 761px) and (max-width: 1294px) {
+    & {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    & {
+      display: flex;
+      margin: 24px 16px 0px 0px;
+    }
+  }
+}
+
+.nav-mob {
+  &-close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #2e2f42;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+  &-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    margin: 80px 0px 0px 40px;
+    width: 151px;
+    height: 200px;
+  }
+
+  &-studio {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--ocean);
+  }
+
+  &-portfolio {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+    padding-top: 40px;
+  }
+
+  &-contacts {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+    padding-top: 40px;
+  }
+  &-info {
+    width: 353px;
+    height: 104px;
+    margin: 284px 0px 0px 40px;
+    display: grid;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  &-number {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--iris);
+    width: 353px;
+    height: 40px;
+  }
+  &-email {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+    width: 192px;
+    height: auto;
+  }
+  &-icons {
+    display: flex;
+    gap: 56px;
+    margin: 0 40px 40px;
+  }
+
+  @media (max-width: 392px) {
+    &-number {
+      font-size: 30px;
+    }
+  }
+}
